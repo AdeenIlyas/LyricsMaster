@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LyricsMaster - AI Song Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h1>LyricsMaster</h1>
+            </div>
+            <p class="tagline">AI-Powered Song Lyrics Generator</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="generator-card">
+                <h2><i class="fas fa-magic"></i> Create Your Song</h2>
+                <p class="description">Enter a prompt like "Generate a rap song in the style of eminem about school" and let our AI create beautiful lyrics for you.</p>
+                
+                <form id="lyric-form">
+                    <div class="form-group">
+                        <label for="prompt">Your Prompt:</label>
+                        <textarea id="prompt" name="prompt" rows="4" placeholder="Generate a song in the style of Taylor Swift about new beginnings..."></textarea>
+                    </div>
+                    
+                    <button type="submit" id="generate-btn">
+                        <span class="btn-text">Generate Lyrics</span>
+                        <i class="fas fa-pen-fancy"></i>
+                    </button>
+                </form>
+
+                <div class="loading-container">
+                    <div class="loading-animation">
+                        <div class="music-note"><i class="fas fa-music"></i></div>
+                        <div class="music-note"><i class="fas fa-music"></i></div>
+                        <div class="music-note"><i class="fas fa-music"></i></div>
+                    </div>
+                    <p>Creating your masterpiece...</p>
+                </div>
+
+                <div id="results-container">
+                    <div class="results-header">
+                        <h3>Your Generated Lyrics</h3>
+                        <button id="copy-btn" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div id="lyrics-display"></div>
+                </div>
+
+                <div id="error-message"></div>
+            </div>
+        </main>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Generation</h3>
+                    <p>Get your lyrics in seconds with our optimized AI model</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h3>Artist Styles</h3>
+                    <p>Generate songs in the style of your favorite artists</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Emotional Depth</h3>
+                    <p>Create lyrics that resonate with genuine emotions</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Creative Freedom</h3>
+                    <p>Customize prompts for unique lyrical creations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2023 LyricsMaster | Powered by AI</p>
+            <div class="social-links">
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
