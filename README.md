@@ -56,6 +56,4 @@ python app.py
 
 This application uses a fine-tuned DeepSeek-R1-Distill-Llama-8B model for generating lyrics.
 
-## License
 
-MIT 
