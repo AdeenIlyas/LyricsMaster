@@ -1,10 +1,12 @@
 # LyricsMaster - AI Song Lyrics Generator
 
+
+![Screenshot 2025-05-04 194210](https://github.com/user-attachments/assets/31e53335-1782-4252-bafc-e02b7cbbe447)
+
 A Flask application that uses a fine-tuned LLM to generate song lyrics in the style of different artists.
 
 ## Features
 
-- Beautiful, modern UI with animations and effects
 - Generate song lyrics based on your prompts
 - Specify artist styles and themes
 - Copy generated lyrics to clipboard
